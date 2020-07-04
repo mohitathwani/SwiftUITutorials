@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06090F3F24B0FB76003C27AC /* ProminentTabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06090F3E24B0FB76003C27AC /* ProminentTabBarItemView.swift */; };
+		06221EF224AFC34700440C7D /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06221EF124AFC34700440C7D /* MockProvider.swift */; };
+		06221EF524AFC3EE00440C7D /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06221EF424AFC3EE00440C7D /* Nunito-Bold.ttf */; };
 		066E2DFB24AD4FFB00CDDB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E2DFA24AD4FFB00CDDB00 /* AppDelegate.swift */; };
 		066E2DFD24AD4FFB00CDDB00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E2DFC24AD4FFB00CDDB00 /* SceneDelegate.swift */; };
-		066E2DFF24AD4FFB00CDDB00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E2DFE24AD4FFB00CDDB00 /* ContentView.swift */; };
 		066E2E0124AD4FFC00CDDB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 066E2E0024AD4FFC00CDDB00 /* Assets.xcassets */; };
 		066E2E0424AD4FFC00CDDB00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 066E2E0324AD4FFC00CDDB00 /* Preview Assets.xcassets */; };
 		066E2E0724AD4FFC00CDDB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066E2E0524AD4FFC00CDDB00 /* LaunchScreen.storyboard */; };
+		066E2E1024AD502300CDDB00 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E2E0F24AD502300CDDB00 /* Extensions.swift */; };
+		066E2E1224AD507D00CDDB00 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E2E1124AD507D00CDDB00 /* TabBarView.swift */; };
+		066E2E1524AD65D800CDDB00 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066E2E1424AD65D800CDDB00 /* TabBarItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06090F3E24B0FB76003C27AC /* ProminentTabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProminentTabBarItemView.swift; sourceTree = "<group>"; };
+		06221EF124AFC34700440C7D /* MockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProvider.swift; sourceTree = "<group>"; };
+		06221EF424AFC3EE00440C7D /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		066E2DF724AD4FFB00CDDB00 /* SwiftUITutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		066E2DFA24AD4FFB00CDDB00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		066E2DFC24AD4FFB00CDDB00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		066E2DFE24AD4FFB00CDDB00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		066E2E0024AD4FFC00CDDB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		066E2E0324AD4FFC00CDDB00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		066E2E0624AD4FFC00CDDB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		066E2E0824AD4FFC00CDDB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		066E2E0F24AD502300CDDB00 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		066E2E1124AD507D00CDDB00 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		066E2E1424AD65D800CDDB00 /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06221EF324AFC38E00440C7D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				06221EF424AFC3EE00440C7D /* Nunito-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		066E2DEE24AD4FFB00CDDB00 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +74,16 @@
 		066E2DF924AD4FFB00CDDB00 /* SwiftUITutorials */ = {
 			isa = PBXGroup;
 			children = (
+				06221EF324AFC38E00440C7D /* Fonts */,
+				066E2E1324AD65B900CDDB00 /* TabBarView */,
+				066E2E0E24AD501500CDDB00 /* Extensions */,
 				066E2DFA24AD4FFB00CDDB00 /* AppDelegate.swift */,
 				066E2DFC24AD4FFB00CDDB00 /* SceneDelegate.swift */,
-				066E2DFE24AD4FFB00CDDB00 /* ContentView.swift */,
 				066E2E0024AD4FFC00CDDB00 /* Assets.xcassets */,
 				066E2E0524AD4FFC00CDDB00 /* LaunchScreen.storyboard */,
 				066E2E0824AD4FFC00CDDB00 /* Info.plist */,
 				066E2E0224AD4FFC00CDDB00 /* Preview Content */,
+				06221EF124AFC34700440C7D /* MockProvider.swift */,
 			);
 			path = SwiftUITutorials;
 			sourceTree = "<group>";
@@ -73,6 +94,24 @@
 				066E2E0324AD4FFC00CDDB00 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		066E2E0E24AD501500CDDB00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				066E2E0F24AD502300CDDB00 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		066E2E1324AD65B900CDDB00 /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				066E2E1124AD507D00CDDB00 /* TabBarView.swift */,
+				066E2E1424AD65D800CDDB00 /* TabBarItemView.swift */,
+				06090F3E24B0FB76003C27AC /* ProminentTabBarItemView.swift */,
+			);
+			name = TabBarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +174,7 @@
 			files = (
 				066E2E0724AD4FFC00CDDB00 /* LaunchScreen.storyboard in Resources */,
 				066E2E0424AD4FFC00CDDB00 /* Preview Assets.xcassets in Resources */,
+				06221EF524AFC3EE00440C7D /* Nunito-Bold.ttf in Resources */,
 				066E2E0124AD4FFC00CDDB00 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,7 +188,11 @@
 			files = (
 				066E2DFB24AD4FFB00CDDB00 /* AppDelegate.swift in Sources */,
 				066E2DFD24AD4FFB00CDDB00 /* SceneDelegate.swift in Sources */,
-				066E2DFF24AD4FFB00CDDB00 /* ContentView.swift in Sources */,
+				06221EF224AFC34700440C7D /* MockProvider.swift in Sources */,
+				06090F3F24B0FB76003C27AC /* ProminentTabBarItemView.swift in Sources */,
+				066E2E1224AD507D00CDDB00 /* TabBarView.swift in Sources */,
+				066E2E1524AD65D800CDDB00 /* TabBarItemView.swift in Sources */,
+				066E2E1024AD502300CDDB00 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
