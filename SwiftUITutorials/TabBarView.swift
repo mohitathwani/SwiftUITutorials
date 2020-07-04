@@ -14,7 +14,11 @@ struct TabBarView: View {
   private let height: CGFloat = 95
   private let shadowRadius: CGFloat = 16
   
-  private let prominentItemTopPadding: CGFloat = -70
+  private let prominentItemWidth: CGFloat = 70
+  
+  private var prominentItemTopPadding: CGFloat {
+    return -prominentItemWidth
+  }
   
   let tabBarItems: [TabBarItem]
   let prominentItemImageName: String
@@ -44,6 +48,10 @@ private extension TabBarView {
       .padding(.top, prominentItemTopPadding)
   }
   
+  private func tabBarItemWidth(from proxy: GeometryProxy) -> CGFloat {
+    return (proxy.frame(in: .global).width - prominentItemWidth) / 4
+  }
+  
   private var tabBarItemsView: some View {
     GeometryReader { geo in
       HStack {
@@ -54,7 +62,7 @@ private extension TabBarView {
                          defaultColor: .tabBarItemDefaultTintColor,
                          selectedColor: .tabBarItemSelectedTintColor,
                          font: .nunitoBold(size: 14))
-            .frame(width: (geo.frame(in: .global).width - 70) / 4)
+            .frame(width: self.tabBarItemWidth(from: geo))
             .onTapGesture {
               self.selectedIndex = idx
           }
@@ -69,7 +77,7 @@ private extension TabBarView {
                          defaultColor: .tabBarItemDefaultTintColor,
                          selectedColor: .tabBarItemSelectedTintColor,
                          font: .nunitoBold(size: 14))
-            .frame(width: (geo.frame(in: .global).width - 70) / 4)
+            .frame(width: self.tabBarItemWidth(from: geo))
             .onTapGesture {
               self.selectedIndex = idx
           }
