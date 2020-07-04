@@ -44,7 +44,7 @@ private extension TabBarView {
   }
   
   private var prominentItemView: some View {
-    ProminentTabBarItemView(systemImageName: prominentItemImageName)
+    ProminentTabBarItemView(systemImageName: prominentItemImageName) {}
       .padding(.top, prominentItemTopPadding)
   }
   
