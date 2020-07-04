@@ -22,6 +22,7 @@ struct TabBarView: View {
   
   let tabBarItems: [TabBarItem]
   let prominentItemImageName: String
+  let prominentItemAction: () -> Void
   
   @State var selectedIndex = 0
   
@@ -44,8 +45,11 @@ private extension TabBarView {
   }
   
   private var prominentItemView: some View {
-    ProminentTabBarItemView(systemImageName: prominentItemImageName) {}
-      .padding(.top, prominentItemTopPadding)
+    ProminentTabBarItemView(systemImageName: prominentItemImageName) {
+      self.prominentItemAction()
+    }
+    
+    .padding(.top, prominentItemTopPadding)
   }
   
   private func tabBarItemWidth(from proxy: GeometryProxy) -> CGFloat {
@@ -89,6 +93,7 @@ private extension TabBarView {
 
 struct TabBarView_Previews: PreviewProvider {
   static var previews: some View {
-    TabBarView(tabBarItems: MockProvider.tabBarItems, prominentItemImageName: "plus")
+    TabBarView(tabBarItems: MockProvider.tabBarItems,
+               prominentItemImageName: "plus") {}
   }
 }
