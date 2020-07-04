@@ -14,7 +14,10 @@ struct TabBarView: View {
   private let height: CGFloat = 95
   private let shadowRadius: CGFloat = 16
   
+  private let prominentItemTopPadding: CGFloat = -70
+  
   let tabBarItems: [TabBarItem]
+  let prominentItemImageName: String
   
   @State var selectedIndex = 0
   
@@ -22,7 +25,7 @@ struct TabBarView: View {
     ZStack {
       containerBox
       prominentItemView
-//      tabBarItemsView
+      tabBarItemsView
     }
   }
 }
@@ -37,22 +40,39 @@ private extension TabBarView {
   }
   
   private var prominentItemView: some View {
-    ProminentTabBarItemView(systemImageName: "plus")
-      .padding(.top, -70)
+    ProminentTabBarItemView(systemImageName: prominentItemImageName)
+      .padding(.top, prominentItemTopPadding)
   }
   
   private var tabBarItemsView: some View {
-    HStack {
-      ForEach(0..<tabBarItems.count) { idx in
-        TabBarItemView(tabBarItem: self.tabBarItems[idx],
-                       selectedIndex: self.selectedIndex,
-                       tabBarIndex: idx,
-                       defaultColor: .tabBarItemDefaultTintColor,
-                       selectedColor: .tabBarItemSelectedTintColor,
-                       font: .nunitoBold(size: 14))
-          .padding(.horizontal, 5)
-          .onTapGesture {
-            self.selectedIndex = idx
+    GeometryReader { geo in
+      HStack {
+        ForEach(0..<2) { idx in
+          TabBarItemView(tabBarItem: self.tabBarItems[idx],
+                         selectedIndex: self.selectedIndex,
+                         tabBarIndex: idx,
+                         defaultColor: .tabBarItemDefaultTintColor,
+                         selectedColor: .tabBarItemSelectedTintColor,
+                         font: .nunitoBold(size: 14))
+            .frame(width: (geo.frame(in: .global).width - 70) / 4)
+            .onTapGesture {
+              self.selectedIndex = idx
+          }
+        }
+        
+        Spacer()
+        
+        ForEach(2..<self.tabBarItems.count) { idx in
+          TabBarItemView(tabBarItem: self.tabBarItems[idx],
+                         selectedIndex: self.selectedIndex,
+                         tabBarIndex: idx,
+                         defaultColor: .tabBarItemDefaultTintColor,
+                         selectedColor: .tabBarItemSelectedTintColor,
+                         font: .nunitoBold(size: 14))
+            .frame(width: (geo.frame(in: .global).width - 70) / 4)
+            .onTapGesture {
+              self.selectedIndex = idx
+          }
         }
       }
     }
@@ -61,6 +81,6 @@ private extension TabBarView {
 
 struct TabBarView_Previews: PreviewProvider {
   static var previews: some View {
-    TabBarView(tabBarItems: MockProvider.tabBarItems)
+    TabBarView(tabBarItems: MockProvider.tabBarItems, prominentItemImageName: "plus")
   }
 }

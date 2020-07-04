@@ -10,6 +10,16 @@ import SwiftUI
 
 struct ProminentTabBarItemView: View {
   
+  var width: CGFloat = 70
+  
+  private var innerCircleWidth: CGFloat {
+    return width - 10
+  }
+  
+  private var imageWidth: CGFloat {
+    return innerCircleWidth / 2
+  }
+  
   private var gradient: LinearGradient {
     let endColor = Color(red: 0.495, green: 0.945, blue: 0.571)
     
@@ -19,23 +29,25 @@ struct ProminentTabBarItemView: View {
     
     return LinearGradient(gradient: gradient, startPoint: .bottomLeading, endPoint: .topTrailing)
   }
+  
   let systemImageName: String
+  
     var body: some View {
       ZStack() {
         Circle()
-        .size(CGSize(width: 70, height: 70))
+        .size(CGSize(width: width, height: width))
           .foregroundColor(.white)
         
         Circle()
-        .size(CGSize(width: 60, height: 60))
+        .size(CGSize(width: innerCircleWidth, height: innerCircleWidth))
           .fill(gradient)
         .offset(x: 5, y: 5)
         
         Image(systemName: systemImageName)
         .resizable()
-          .frame(width: 30, height: 30)
+          .frame(width: imageWidth, height: imageWidth)
           .foregroundColor(.white)
-      }.frame(width: 70, height:70)
+      }.frame(width: width, height: width)
     }
 }
 
