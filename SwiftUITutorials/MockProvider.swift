@@ -13,7 +13,7 @@ struct MockProvider {
     var tabBarItems = [TabBarItem]()
     tabBarItems.append(TabBarItem(imageName: "rectangle.grid.1x2", title: "Dashboard"))
     tabBarItems.append(TabBarItem(imageName: "creditcard", title: "Accounts"))
-    tabBarItems.append(TabBarItem(imageName: "chart.pie", title: "Reports"))
+    tabBarItems.append(TabBarItem(imageName: "arrow.up.arrow.down", title: "Transactions"))
     tabBarItems.append(TabBarItem(imageName: "gear", title: "Settings"))
     return tabBarItems
   }
