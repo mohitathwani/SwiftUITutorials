@@ -34,29 +34,29 @@ struct ProminentTabBarItemView: View {
   let action: () -> Void
   
   
-    var body: some View {
-      Button (action: action) {
-        ZStack() {
-          Circle()
+  var body: some View {
+    Button (action: action) {
+      ZStack() {
+        Circle()
           .size(CGSize(width: width, height: width))
-            .foregroundColor(.white)
-          
-          Circle()
+          .foregroundColor(.white)
+        
+        Circle()
           .size(CGSize(width: innerCircleWidth, height: innerCircleWidth))
-            .fill(gradient)
+          .fill(gradient)
           .offset(x: 5, y: 5)
-          
-          Image(systemName: systemImageName)
+        
+        Image(systemName: systemImageName)
           .resizable()
-            .frame(width: imageWidth, height: imageWidth)
-            .foregroundColor(.white)
-        }.frame(width: width, height: width)
-      }
+          .frame(width: imageWidth, height: imageWidth)
+          .foregroundColor(.white)
+      }.frame(width: width, height: width)
     }
+  }
 }
 
 struct ProminentTabBarItemView_Previews: PreviewProvider {
-    static var previews: some View {
-      ProminentTabBarItemView(systemImageName: "plus") {}
-    }
+  static var previews: some View {
+    ProminentTabBarItemView(systemImageName: "plus") {}
+  }
 }

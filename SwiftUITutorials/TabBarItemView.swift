@@ -8,9 +8,7 @@
 
 import SwiftUI
 
-struct TabBarItem: Identifiable {
-  var id = UUID()
-  
+struct TabBarItem {
   let imageName: String
   let title: String
 }
@@ -43,7 +41,7 @@ struct TabBarItemView: View {
         .frame(width: 30, height: 30)
       Text(tabBarItem.title)
         .font(font)
-      .foregroundColor(displayColor)
+        .foregroundColor(displayColor)
         .frame(height: 10)
     }
   }
