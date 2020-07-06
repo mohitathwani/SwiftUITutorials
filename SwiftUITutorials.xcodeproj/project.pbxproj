@@ -74,8 +74,8 @@
 		066E2DF924AD4FFB00CDDB00 /* SwiftUITutorials */ = {
 			isa = PBXGroup;
 			children = (
+				06F9BDB324B2AAF60068239F /* TabBarView */,
 				06221EF324AFC38E00440C7D /* Fonts */,
-				066E2E1324AD65B900CDDB00 /* TabBarView */,
 				066E2E0E24AD501500CDDB00 /* Extensions */,
 				066E2DFA24AD4FFB00CDDB00 /* AppDelegate.swift */,
 				066E2DFC24AD4FFB00CDDB00 /* SceneDelegate.swift */,
@@ -104,14 +104,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		066E2E1324AD65B900CDDB00 /* TabBarView */ = {
+		06F9BDB324B2AAF60068239F /* TabBarView */ = {
 			isa = PBXGroup;
 			children = (
 				066E2E1124AD507D00CDDB00 /* TabBarView.swift */,
 				066E2E1424AD65D800CDDB00 /* TabBarItemView.swift */,
 				06090F3E24B0FB76003C27AC /* ProminentTabBarItemView.swift */,
 			);
-			name = TabBarView;
+			path = TabBarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
